@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import Link from "next/link";
-import styles from "./Button.module.scss";
-import Spinner from "./svgs/Spinner";
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+import styles from './Button.module.scss';
+import Spinner from './svgs/Spinner';
 
 export default function Button(props) {
   const {
@@ -15,8 +15,8 @@ export default function Button(props) {
   } = props;
 
   const classNames = (
-    [styles.button, className].join(" ") +
-    (fullWidth ? styles["--full-width"] : "")
+    [styles.button, className].join(' ')
+    + (fullWidth ? styles['--full-width'] : '')
   ).trim();
 
   return (

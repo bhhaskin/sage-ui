@@ -2,7 +2,7 @@ const SvgComponent = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     style={{
-      display: "inline-block",
+      display: 'inline-block',
     }}
     width="2em"
     height="2m"
