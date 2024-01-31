@@ -6,51 +6,51 @@ $border-color: #cccccc !default;
 $color: #333333 !default;
 
 .button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  width: fit-content;
-  appearance: none;
-  box-shadow: none;
-  border: 1px solid $border-color;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: $color;
-  background-color: $background-color;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    appearance: none;
+    box-shadow: none;
+    border: 1px solid $border-color;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: $color;
+    background-color: $background-color;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    
+    transition: 
+        background-color 100ms ease-in-out,
+        border-color 100ms ease-in-out;
 
-  transition:
-    background-color 100ms ease-in-out,
-    border-color 100ms ease-in-out;
+    &:hover {
+        background-color: color.scale($background-color, $lightness: -10%);
+        border-color: color.scale($border-color, $lightness: -2%);
+    }
 
-  &:hover {
-    background-color: color.darken($background-color, 10%);
-    border-color: color.darken($border-color, 2%);
-  }
+    &:active {
+        box-shadow: 0 0 1px 0 color.scale($color, $lightness: 10%) inset;
+    }
 
-  &:active {
-    box-shadow: 0 0 1px 0 color.lighten($color, 10%) inset;
-  }
+    &:disabled {
+        background-color: color.scale($background-color, $lightness: 8%) !important;
+        cursor: not-allowed;
+    }
 
-  &:disabled {
-    background-color: color.lighten($background-color, 8%) !important;
-    cursor: not-allowed;
-  }
+    & + & {
+        margin-left: 4px;
+    }
 
-  & + & {
-    margin-left: 4px;
-  }
+    &.\--full-width {
+        width: 100%;
+        padding: 12px 18px;
+    }
 
-  &.\--full-width {
-    width: 100%;
-    padding: 12px 18px;
-  }
-
-  svg {
-    padding-right: 1ch;
-  }
+    svg {
+        padding-right: 1ch;
+    }
 }
