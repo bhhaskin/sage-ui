@@ -5,6 +5,6 @@
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
         "color-hex-length": "long",
-        "max-nexting-depth": 4
+        "max-nesting-depth": 4
     }
 }

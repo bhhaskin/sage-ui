@@ -4,3 +4,4 @@ yarn-error.log
 *.tgz
 storybook-static/*
 !storybook-static/.gitkeep
+.cache
