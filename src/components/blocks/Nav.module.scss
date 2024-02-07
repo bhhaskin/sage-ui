@@ -1,0 +1,22 @@
+@use "../../helpers";
+
+
+.nav {
+    @extend %gutter;
+    align-items: center;
+    background-color: #222222;
+    display: flex;
+    flex: row;
+    height: 55px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}

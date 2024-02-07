@@ -1,0 +1,65 @@
+@use 'sass:map';
+
+$grid: (
+    max-width: 1920px,
+    normal-width: 1140px,
+    gutter: 36px,
+    gutter-md: 30px,
+    gutter-lg: 30px,
+  ) !default;
+
+$breakpoints: (
+    md: 575px,
+    lg: 1025px,
+  ) !default;
+
+%remove-outline {
+  outline: 0;
+
+  &::-moz-focus-inner { // sass-lint:disable-line no-vendor-prefixes
+    border: 0;
+  }
+}
+
+%sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+%background-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+   > picture {
+    display: none;
+  }
+}
+
+%gutter {
+    @media screen and (min-width: map.get($breakpoints, md))  {
+        padding-left:  map.get($grid, gutter-md);
+        padding-right: map.get($grid, gutter-md);
+    }
+
+    @media screen and (min-width: map.get($breakpoints, lg))  {
+    padding-left: map.get($grid, gutter-lg);
+    padding-right: map.get($grid, gutter-lg);
+  }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: map.get($grid, gutter);
+  padding-right: map.get($grid, gutter);
+}
+
+%width-restrict {
+  @extend %gutter;
+
+  max-width:  map.get($grid, normal-width);
+}

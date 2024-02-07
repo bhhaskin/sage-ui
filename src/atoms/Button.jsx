@@ -44,18 +44,36 @@ export default function Button(props) {
 
 Button.defaultProps = {
   children: null,
-  href: null,
   className: null,
-  fullWidth: false,
-  loading: false,
   disabled: null,
+  fullWidth: false,
+  href: null,
+  loading: false,
 };
 
 Button.propTypes = {
-  disabled: PropTypes.bool,
-  href: PropTypes.string,
-  fullWidth: PropTypes.bool,
-  className: PropTypes.string,
-  loading: PropTypes.bool,
+  /**
+   * What goes in the button
+   */
   children: PropTypes.node,
+  /**
+   * Apply external classname
+   */
+  className: PropTypes.string,
+  /**
+   * Is the button disabled?
+   */
+  disabled: PropTypes.bool,
+  /**
+   * Is the button full width?
+   */
+  fullWidth: PropTypes.bool,
+  /**
+   * If set this will be a link and not a button
+   */
+  href: PropTypes.string,
+  /**
+   * Is the button loading?
+   */
+  loading: PropTypes.bool,
 };
