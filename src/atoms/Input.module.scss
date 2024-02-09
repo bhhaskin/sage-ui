@@ -1,0 +1,28 @@
+@use "../helpers";
+
+.input {
+    &.\--error {
+      .input__control {
+          border: 1px solid #ff0000;
+      }
+  }
+
+  &__control {
+      @extend %remove-outline;
+
+      appearance: none;
+      height: 40px;
+      width: 100%;
+      padding-left: 14px;
+      padding-right: 14px;
+      font-size: 14px;
+      font-family: 'Open Sans', sans-serif;
+      border-radius: 3px;
+      border: 1px solid #f1f1f1;
+      transition: border-color 0.8s;
+
+      &:focus {
+          border: 1px solid #a0a0a0;
+      }
+  }
+}
