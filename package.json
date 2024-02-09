@@ -3,7 +3,10 @@
   "version": "0.0.2",
   "description": "Simple UI for making simple things",
   "main": "index.js",
-  "repository": "git@github.com:bhhaskin/sage-ui.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bhhaskin/sage-ui.git"
+  },
   "author": "Bryan Haskin <bhhaskin@bitsofsimplicity.com>",
   "license": "MIT",
   "exports": {
