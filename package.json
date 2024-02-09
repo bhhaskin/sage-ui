@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "Bryan Haskin <bhhaskin@bitsofsimplicity.com>",
   "license": "MIT",
-  "private": false,
   "exports": {
     "./": "./src/"
   },
