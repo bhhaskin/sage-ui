@@ -1,11 +1,11 @@
 {
-  "name": "sage-ui",
+  "name": "@bhhaskin/sage-ui",
   "version": "0.0.1",
   "description": "Simple UI for making simple things",
   "main": "index.js",
   "author": "Bryan Haskin <bhhaskin@bitsofsimplicity.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "exports": {
     "./": "./src/"
   },
