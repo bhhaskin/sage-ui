@@ -1,6 +1,6 @@
 {
   "name": "@bhhaskin/sage-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple UI for making simple things",
   "main": "index.js",
   "repository": {
